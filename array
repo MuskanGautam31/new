@@ -1,0 +1,43 @@
+#include<stdio.h>
+ int main()
+ {
+ 
+ 
+ int arr = {83,1,45,95,52,11,47,0,45,67,82};
+ algorithm(arr);
+ return 0;
+ }
+ 
+ 
+void  algorithm(int arr[])
+ {
+ int temp = 0;
+ int length = sizeof(arr)/sizeof(arr[0]);
+ printf("elements of original array");
+ for(int i = 0; i <length ; i++)
+ {
+ printf("%d",arr[i]);
+ }
+ for(int i = 0 ; i <length; i ++)
+ {
+   for (int j = i+1; j < length; j++) {     
+           if(arr[i] > arr[j]) {    
+               temp = arr[i];    
+               arr[i] = arr[j];    
+               arr[j] = temp;    
+           }     
+        }     
+ 
+ }
+ 
+      
+    printf("\n");    
+        
+     
+    printf("Elements of array sorted in ascending order: \n");    
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr[i]);    
+    }    
+    return 0;    
+}     
+ }
